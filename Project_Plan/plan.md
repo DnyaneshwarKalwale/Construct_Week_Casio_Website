@@ -15,43 +15,37 @@ The project will feature a clean, modern layout, responsive design, and interact
 
 ## Team Members & Roles
 
-- **fw12_123**: Team Lead
+- **fs40_362012**: Team Lead
 - **fs39_32011**: Team Member
-- **fs40_362012**: Team Member
 - **fs40_391895**: Team Member
 - **fs40_361933**: Team Member
 
 ## Tasks Breakdown
 
-### **fw12_123:**
+### **fs40_362012:**
 - **Day 1**: Home Page UI
-- **Day 2**: Authentication API
-- **Day 3**: Add to Cart Feature
-- **Day 4**: Bug Fix - Product Page Responsiveness
+- **Day 2**: Authentication API and Search function.
+- **Day 3**: Add to Cart Feature and  Link Validation and Testing
+- **Day 4**: Bug Fix - Product Page Responsiveness and Final Testing and Debugging
 
-### **fs39_32011:**
+
+### **fs40_391895:**
 - **Day 1**: Support and Corporate Page UI
 - **Day 2**: Navbar Styling
 - **Day 3**: Checkout Page Functionality
-- **Day 4**: Bug Fix - Footer Layout
+- **Day 4**: Bug Fix - Support and Corporate
 
-### **fs40_362012:**
-- **Day 1**: Login Page UI
-- **Day 2**: Form Validation
-- **Day 3**: Responsive Design Adjustments
-- **Day 4**: Bug Fix - Cross-Browser Compatibility
-
-### **fs40_391895:**
-- **Day 1**: Checkout Page UI
-- **Day 2**: Payment Gateway Integration
+### **fs39_32011:**
+- **Day 1**: Checkout and Login Page UI
+- **Day 2**: Payment Gateway Integration and From Validation
 - **Day 3**: Add Interactivity to Checkout
-- **Day 4**: Bug Fix - Navigation Issues
+- **Day 4**: Bug Fix - Navigation Issues and Cross-Browser Compatibility
 
 ### **fs40_361933:**
 - **Day 1**: Footer UI
 - **Day 2**: Footer Interactivity
 - **Day 3**: Link Validation and Testing
-- **Day 4**: Final Testing and Debugging
+- **Day 4**: Bug-Fix - Footer Responsiveness and Cross-Browser Compatibility
 
 ## Technologies Used
 
