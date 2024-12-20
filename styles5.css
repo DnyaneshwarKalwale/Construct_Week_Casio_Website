@@ -1,0 +1,95 @@
+/* General Footer Styles */
+footer {
+    background-color: #f8f9fb;
+    color: #333;
+    font-family: Arial, sans-serif;
+    padding: 50px 0;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Footer Links Section */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #7b4040;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #000;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    color: #6fda54; /* Default icon color */
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f154cc; /* Change color on hover */
+}
+
+/* Policies Section */
+.footer-policies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.footer-policies a {
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+}
+
+.footer-policies a:hover {
+    color: #000;
+}
+
+/* E-Waste Notice */
+.footer-note {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.footer-note a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.footer-note a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright */
+.footer-copyright p {
+    font-size: 12px;
+    color: #888;
+    margin: 10px 0 0;
+}
