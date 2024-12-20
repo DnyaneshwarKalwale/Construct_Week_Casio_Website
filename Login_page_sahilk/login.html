@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <div class="social-login">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIAcHsHjCVfUn9KgHgo-C-MnLbMxyikWqKXw&s" alt="Casio Logo" class="logo">
+            <button class="btn btn-facebook">SIGN IN WITH FACEBOOK</button>
+            <button class="btn btn-google">Sign in with Google</button>
+        </div>
+
+        <div class="divider">or</div>
+
+        <button class="btn btn-otp">Login via OTP</button>
+
+        <div class="divider">or</div>
+
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <div class="form-group">
+                <label for="email">Enter email/mobile number</label>
+                <input type="text" id="email" name="email" placeholder="Email / Mobile" required>
+                <small id="emailError" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Enter Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <small id="passwordError" class="error-message"></small>
+            </div>
+
+            <a href="#" class="forgot-password">forgot password</a>
+
+            <button type="submit" class="btn btn-login">Login</button>
+
+        </form>
+
+        <div class="signup-link">
+            <p>New to Casio? <a href="register.html">Create an account</a></p>
+        </div>
+    </div>
+
+    <script>
+        
+        // Simple form validation for the login form
+        function validateLogin() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            let valid = true;
+
+            // Email Validation
+            const emailError = document.getElementById('emailError');
+            if (!isValidEmail(email)) {
+                emailError.textContent = "Please enter a valid email.";
+                valid = false;
+            } else {
+                emailError.textContent = "";
+            }
+
+            // Password Validation
+            const passwordError = document.getElementById('passwordError');
+            if (!isValidPassword(password)) {
+                passwordError.textContent = "Password must be at least 8 characters and include a mix of letters and numbers.";
+                valid = false;
+            } else {
+                passwordError.textContent = "";
+            }
+
+            // If any field is invalid, prevent form submission
+            if (!valid) {
+                return false;
+            }
+
+            // Simulate login process (for demonstration)
+            if (!checkCredentials(email, password)) {
+                alert("Invalid email or password.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Validate Email format
+        function isValidEmail(email) {
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return regex.test(email);
+        }
+
+        // Validate Password strength
+        function isValidPassword(password) {
+            const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            return regex.test(password);
+        }
+
+        // Simulated check for credentials
+        function checkCredentials(email, password) {
+            const validEmail = "test@example.com"; // Example email
+            const validPassword = "password123";  // Example password
+
+            return email === validEmail && password === validPassword;
+        }
+    </script>
+
+</body>
+
+</html>
