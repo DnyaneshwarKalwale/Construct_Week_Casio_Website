@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .casio-logo {
+  display: flex;
+  align-items: center;
+}
+
+header .casio-logo img {
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+header .casio-logo em {
+  font-style: italic;
+  color: #666;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* nav ul li a:hover {
+  background: #0056b3;
+  color: #fff;
+} */
+
+/* Breadcrumb */
+.breadcrumb {
+  margin-top: 80px; /* To offset the fixed header */
+  padding: 10px 20px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+
+.breadcrumb ol li {
+  color: #888;
+}
+
+.breadcrumb ol li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.breadcrumb ol li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.product-top-image > img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 20px;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+ul.icon-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+
+ul.icon-menu li {
+  flex: 1 1 calc(33.333% - 20px);
+  text-align: center;
+}
+
+ul.icon-menu li img {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+ul.icon-menu li span {
+  display: block;
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+footer .elements {
+  margin-bottom: 10px;
+}
+
+footer .elements span.casio-logo img {
+  max-height: 30px;
+}
+
+footer .elements a {
+  margin: 0 10px;
+  font-size: 0.8em;
+  color: #444;
+  text-decoration: none;
+}
+
+footer .elements a:hover {
+  text-decoration: underline;
+}
+
+footer .language {
+  margin-top: 15px;
+}
+
+footer .language span {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #666;
+}
