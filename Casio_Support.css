@@ -11,7 +11,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #f8f8f8;
+  background-color: #ffffff; /* White background for header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 header .casio-logo img {
@@ -30,11 +31,19 @@ header nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  padding: 0.5rem 1rem; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded corners */
+}
+header nav ul li a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
 }
 
 .breadcrumb {
   padding: 1rem;
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
+}
+.breadcrumb ol li a {
+  color: #0073e6; /* Blue color for breadcrumb links */
 }
 
 .breadcrumb ol {
@@ -46,9 +55,10 @@ header nav ul li a {
 }
 
 .page-head h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   margin: 1rem 0;
+  color: #333;
 }
 
 .product-top-image img {
@@ -62,6 +72,11 @@ header nav ul li a {
   gap: 2rem;
   padding: 2rem;
 }
+.product-information-detail {
+  background-color: #ffffff; /* White background for product details */
+  border-radius: 8px; /* Rounded corners for the detail section */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
 /* Article Card Styling */
 .js-toggle {
@@ -69,6 +84,9 @@ header nav ul li a {
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 5px;
+}
+.js-toggle {
+  transition: all 0.3s ease; /* Smooth transition effect */
 }
 
 .js-toggle h2 {
@@ -111,6 +129,7 @@ footer .elements a {
   font-size: 0.8em;
   color: #444;
   text-decoration: none;
+  color: #0073e6;
 }
 
 footer .elements a:hover {
@@ -138,6 +157,10 @@ footer .language span {
     flex-wrap: wrap;
     justify-content: center;
   }
+  header nav ul li a {
+    padding: 0.75rem; /* Increased padding for mobile view */
+    font-size: 1rem; /* Slightly larger font size on mobile */
+  }
 
   .product-information-detail {
     grid-template-columns: 1fr;
@@ -162,6 +185,10 @@ footer .language span {
 
   .page-head h1 {
     font-size: 1.5rem;
+  }
+  .page-head h1 {
+    font-size: 1.8rem; /* Adjusted heading size for smaller screens */
+    margin-bottom: 1rem; /* Added bottom margin for spacing */
   }
 
   .js-toggle h2 {
