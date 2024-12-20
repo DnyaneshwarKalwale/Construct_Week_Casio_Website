@@ -1,0 +1,63 @@
+[
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP3/AP-300BN/assets/AP-300BN_L_close.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP3/AP-300BN/assets/AP-300BN.jpg.transform/main-visual-pc/image.jpg",
+      "name": "AP-300BN",
+      "price": "₹ 1,19,995 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP3/AP-300WE/assets/AP-300WE_L_close.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP3/AP-300WE/assets/AP-300WE.jpg.transform/main-visual-pc/image.jpg",
+      "name": "AP-300WE",
+      "price": "₹ 1,19,995 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP5/ap-550bk/assets/AP-550BK-1.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP5/ap-550bk/assets/AP-550BK-2.jpg.transform/main-visual-pc/image.jpg",
+      "name": "AP-550BK",
+      "price": "₹ 1,56,995 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP5/ap-550we/assets/AP-550WE-1.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP5/ap-550we/assets/AP-550WE-2.jpg.transform/main-visual-pc/image.jpg",
+      "name": "AP-550WE",
+      "price": "₹ 1,56,995 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP5/ap-550bn/assets/AP-550BN-1.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/AP5/ap-550bn/assets/AP-550BN-2.jpg.transform/main-visual-pc/image.jpg",
+      "name": "AP-550BN",
+      "price": "₹ 1,56,995 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/APS/AP-S200BK/assets/AP-S200BK_L.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/APS/AP-S200BK/assets/AP-S200BK.jpg.transform/main-visual-pc/image.jpg",
+      "name": "AP-S200BK",
+      "price": "₹ 89,995 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/APS/AP-S200BN/assets/AP-S200BN_L.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/APS/AP-S200BN/assets/AP-S200BN.jpg.transform/main-visual-pc/image.jpg",
+      "name": "AP-S200BN",
+      "price": "₹ 89,995 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/APS/AP-S200WE/assets/AP-S200WE_L.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/A/AP/APS/AP-S200WE/assets/AP-S200WE.jpg.transform/main-visual-pc/image.jpg",
+      "name": "AP-S200WE",
+      "price": "₹ 89,995 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/P/PX/PXS/px-s6000bk/assets/px-s6000-main01.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/P/PX/PXS/px-s6000bk/assets/px-s6000-main02.jpg.transform/main-visual-pc/image.jpg",
+      "name": "PX-S6000BK",
+      "price": "₹ 1,49,993 (incl. of all taxes)"
+    },
+    {
+      "img1": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTS/ct-s1-76bk/assets/CT-S1-76BK-Seq1.png.transform/main-visual-pc/image.png",
+      "img2": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTS/ct-s1-76bk/assets/CT-S1-76BK-Seq2.jpg.transform/main-visual-pc/image.jpg",
+      "name": "CT-S1-76BK",
+      "price": "₹ 25,995 (incl. of all taxes)"
+    }
+  ]
+  
