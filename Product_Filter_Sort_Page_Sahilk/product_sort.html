@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Casio Watch Filter and Pagination</title>
+
+    <link rel="stylesheet" href="product_sort.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Casio Watches</h1>
+        <nav>
+            <select id="sortOptions">
+                <option value="name">Sort by Name</option>
+                <option value="price">Sort by Price</option>
+            </select>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label for="priceRange">Price Range</label>
+                <select id="priceRange">
+                    <option value="">All</option>
+                    <option value="0-5000">0 - ₹5000</option>
+                    <option value="5001-10000">₹5001 - ₹10000</option>
+                    <option value="10001-15000">₹10001 - ₹15000</option>
+                    <option value="15001-9999999">₹15001+</option>
+
+                </select>
+
+            </div>
+
+            <div class="filter-group">
+                <label for="sizes">Sizes</label>
+                <select id="sizes">
+                    <option value="">All</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="functions">Functions</label>
+                <select id="functions">
+                    <option value="">All</option>
+                    <option value="bluetooth">Bluetooth</option>
+                    <option value="solar">Solar</option>
+                    <option value="water-resistant">Water Resistant</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div id="watchesList" class="watches-grid"></div>
+
+        <div id="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="currentPage">1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </main>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <script>
+
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBERuOH-3GvNnYxWSHMMKgBk0hRQ4D5O-U",
+            authDomain: "casio-product-sort-page.firebaseapp.com",
+            projectId: "casio-product-sort-page",
+            storageBucket: "casio-product-sort-page.firebasestorage.app",
+            messagingSenderId: "952840620124",
+            appId: "1:952840620124:web:7e6bb7245330c5f4463e99"
+        };
+
+
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        let watches = [];
+        let currentPage = 1;
+        const watchesPerPage = 5;
+
+        function fetchWatchesFromDatabase() {
+            const watchesRef = database.ref('watches');
+            watchesRef.once('value', (snapshot) => {
+                watches = Object.values(snapshot.val());
+                displayWatches(watches);
+            });
+        }
+
+        function displayWatches(filteredWatches) {
+            const watchesList = document.getElementById('watchesList');
+            watchesList.innerHTML = '';
+
+            const startIndex = (currentPage - 1) * watchesPerPage;
+            const endIndex = startIndex + watchesPerPage;
+            const pageWatches = filteredWatches.slice(startIndex, endIndex);
+
+            pageWatches.forEach((watch) => {
+                const watchElement = document.createElement('div');
+                watchElement.className = 'watch-card';
+
+                const imageElement = document.createElement('img');
+                imageElement.src = watch.image;
+                imageElement.alt = watch.code;
+
+                const brandElement = document.createElement('p');
+                brandElement.className = 'brand';
+                brandElement.textContent = watch.brand;
+
+                const priceElement = document.createElement('p');
+                priceElement.className = 'price';
+                priceElement.textContent = `₹${watch.price} (Incl. of all taxes)`;
+
+                const codeElement = document.createElement('p');
+                codeElement.className = 'code';
+                codeElement.textContent = watch.code;
+
+                watchElement.appendChild(imageElement);
+                watchElement.appendChild(brandElement);
+                watchElement.appendChild(priceElement);
+                watchElement.appendChild(codeElement);
+                watchesList.appendChild(watchElement);
+            });
+
+            updatePagination(filteredWatches.length);
+        }
+
+        function updatePagination(totalWatches) {
+            const totalPages = Math.ceil(totalWatches / watchesPerPage);
+            document.getElementById('currentPage').textContent = currentPage;
+            
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = currentPage === totalPages;
+        }
+
+        function sortWatches() {
+            const sortOption = document.getElementById('sortOptions').value;
+            if (sortOption === 'name') {
+                watches.sort((a, b) => a.code.localeCompare(b.code));
+            } else if (sortOption === 'price') {
+                watches.sort((a, b) => parseFloat(a.price.replace(/,/g, '')) - parseFloat(b.price.replace(/,/g, '')));
+            }
+            currentPage = 1; 
+            filterWatches(); 
+        }
+
+        function filterWatches() {
+            const priceRange = document.getElementById('priceRange').value;
+            const sizes = document.getElementById('sizes').value;
+            const functions = document.getElementById('functions').value;
+            
+            let filteredWatches = watches.filter(watch => {
+                const priceMatch = !priceRange || (parseFloat(watch.price.replace(/,/g, '')) >= parseInt(priceRange.split('-')[0]) && parseFloat(watch.price.replace(/,/g, '')) <= parseInt(priceRange.split('-')[1]));
+                const sizeMatch = !sizes || watch.size === sizes;
+                const functionMatch = !functions || watch.functions.includes(functions);
+                
+                return priceMatch && sizeMatch && functionMatch;
+            });
+            
+            currentPage = 1; 
+            displayWatches(filteredWatches);
+        }
+
+        document.getElementById('prevPage').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayWatches(watches); 
+            }
+        });
+
+        document.getElementById('nextPage').addEventListener('click', function() {
+            const totalPages = Math.ceil(watches.length / watchesPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayWatches(watches); 
+            }
+        });
+
+        document.getElementById('sortOptions').addEventListener('change', sortWatches);
+        document.querySelectorAll('.filters select').forEach(select => {
+            select.addEventListener('change', filterWatches);
+        });
+
+        window.onload = fetchWatchesFromDatabase;
+
+    </script>
+
+</body>
+
+</html>
